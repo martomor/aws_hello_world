@@ -7,9 +7,9 @@ dictConfig(log_config)
 
 logger = logging.getLogger('aws_hello_logger') 
 
-app = FastAPI(info=True)
+app = FastAPI()
 
 @app.get('/health')
 def make_request():
-    logger.info("App is ok")
+    logger.info("App is running ok")
     return 'Hello World!'
